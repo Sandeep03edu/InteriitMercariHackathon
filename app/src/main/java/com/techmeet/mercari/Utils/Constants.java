@@ -8,6 +8,9 @@ public class Constants {
 
     public static final String NUMBER_PATTERN_REGEX = "[0-9]+";
 
+    public static final int PICK_IMAGES_CODE=101;
+    public static final int READ_EXTERNAL_STORAGE=213;
+
     // Registration constants
     public static final int TYPE_LOGIN = 1;
     public static final int TYPE_REGISTER = 2;

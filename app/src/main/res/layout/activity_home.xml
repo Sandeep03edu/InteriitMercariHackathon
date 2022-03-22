@@ -145,7 +145,7 @@
                 android:layout_gravity="center"
                 android:textColor="@color/black"
                 android:layout_height="wrap_content"
-                android:text="Past Appointment"/>
+                android:text="Your Appointments"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -173,7 +173,7 @@
                 android:layout_gravity="center"
                 android:textColor="@color/black"
                 android:layout_height="wrap_content"
-                android:text="Past Lab Test"/>
+                android:text="Add Your Past Disease History"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
