@@ -69,7 +69,7 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.Hospit
                 @Override
                 public void onClick(View view) {
                     // Move to Hospital Detail Page
-                    Intent intent = new Intent(mContext, HospitalDetailActivity.class);
+                    Intent intent = new Intent(mContext, DisplayHospitalDetails.class);
                     intent.putExtra(Constants.HOSPITAL_ID, hospital.gethId());
                     mContext.startActivity(intent);
                 }

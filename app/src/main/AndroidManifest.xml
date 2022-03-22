@@ -16,9 +16,6 @@
             android:name=".Medical.BookAppointment"
             android:exported="false" />
         <activity
-            android:name=".Medical.HospitalDetailActivity"
-            android:exported="false" />
-        <activity
             android:name=".Medical.ViewAppointmentHistory"
             android:exported="false" />
         <activity
