@@ -16,4 +16,8 @@ public class Constants {
     public static final String GENDER_MALE = "Male";
     public static final String GENDER_FEMALE = "Female";
     public static final String GENDER_OTHER = "Other";
+
+    // Hospital Constants
+    public static final String HOSPITAL_ID = "hId";
+    public static final String DOCTOR_ID = "dId";
 }

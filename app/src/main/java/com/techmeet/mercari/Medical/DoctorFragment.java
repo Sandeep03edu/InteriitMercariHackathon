@@ -13,7 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.techmeet.mercari.Model.Doctor;
 import com.techmeet.mercari.R;
+
+import java.util.ArrayList;
 
 public class DoctorFragment extends Fragment {
 
@@ -36,6 +39,9 @@ public class DoctorFragment extends Fragment {
     }
 
     private void GetData() {
+        ArrayList<Doctor> doctorArrayList = new ArrayList<>();
+        DoctorAdapter adapter = new DoctorAdapter(getContext(), doctorArrayList);
+        recyclerView.setAdapter(adapter);
         // TODO: Implement API and adapter
     }
 

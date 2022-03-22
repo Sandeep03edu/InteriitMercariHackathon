@@ -13,7 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.techmeet.mercari.Model.Hospital;
 import com.techmeet.mercari.R;
+
+import java.util.ArrayList;
 
 
 public class HospitalFragment extends Fragment {
@@ -35,7 +38,12 @@ public class HospitalFragment extends Fragment {
     }
 
     private void GetData() {
+        ArrayList<Hospital> hospitals = new ArrayList<>();
+        HospitalAdapter adapter = new HospitalAdapter(getContext(), hospitals);
+        recyclerView.setAdapter(adapter);
+
         // TODO: Implement API and adapter
+
     }
 
     @Override
