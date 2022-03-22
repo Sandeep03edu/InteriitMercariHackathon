@@ -7,4 +7,9 @@ public class Constants {
     public static final String USER_DETAILS = "UserDetails";
 
     public static final String NUMBER_PATTERN_REGEX = "[0-9]+";
+
+    // Gender Constants
+    public static final String GENDER_MALE = "Male";
+    public static final String GENDER_FEMALE = "Female";
+    public static final String GENDER_OTHER = "Other";
 }

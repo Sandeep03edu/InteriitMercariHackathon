@@ -108,7 +108,7 @@ public class LoginActivity extends AppCompatActivity {
                         super.onCodeSent(s, forceResendingToken);
                         verificationCode = s;
                         progressDialog.dismiss();
-
+                        Toast.makeText(getApplicationContext(), "Otp sent on " + prefixedPhoneNumber, Toast.LENGTH_SHORT).show();
                         // Move to Otp enter activity to enter Otp
                         Intent otpIntent = new Intent(LoginActivity.this, OtpFillActivity.class);
                         otpIntent.putExtra(Constants.PREFIXED_MOBILE_NUMBER, prefixedPhoneNumber);

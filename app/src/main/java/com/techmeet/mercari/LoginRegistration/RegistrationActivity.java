@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -53,6 +54,8 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
+        // Setup gender spinner
+        SetupGenderSpinner();
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +64,14 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void SetupGenderSpinner() {
+        String[] genders = new String[]{Constants.GENDER_MALE, Constants.GENDER_FEMALE, Constants.GENDER_OTHER};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(RegistrationActivity.this, android.R.layout.simple_spinner_dropdown_item, genders);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        genderSpinner.setAdapter(adapter);
     }
 
     private void RegisterUser() {
@@ -98,6 +109,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 .newBuilder(auth)
                 .setPhoneNumber(prefixedMobileNumber)
                 .setTimeout(60L, TimeUnit.SECONDS)
+                .setActivity(RegistrationActivity.this)
                 .setCallbacks(new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                     @Override
                     public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
