@@ -9,7 +9,7 @@ import com.techmeet.mercari.Utils.Constants;
 
 public class OtpFillActivity extends AppCompatActivity {
 
-    int type = -1;
+
     String prefixedMobileNum = "";
 
     @Override
@@ -17,17 +17,11 @@ public class OtpFillActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp_fill);
 
-        if(getIntent()==null || !getIntent().hasExtra(Constants.PREFIXED_MOBILE_NUMBER)){
+        if(getIntent()==null || !getIntent().hasExtra(Constants.PREFIXED_MOBILE_NUMBER) || !getIntent().hasExtra(Constants.VERIFICATION_ID)){
             return;
         }
 
-        if(getIntent().hasExtra(Constants.VERIFICATION_ID)){
-            type = Constants.REGISTRATION_TYPE;
-        }
-        else{
-            type = Constants.LOGIN_TYPE;
-        }
-
+        prefixedMobileNum = getIntent().getStringExtra(Constants.PREFIXED_MOBILE_NUMBER);
 
     }
 }
