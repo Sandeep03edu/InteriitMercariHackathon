@@ -56,6 +56,7 @@ public class OtpFillActivity extends AppCompatActivity {
         prefixedMobileNum = getIntent().getStringExtra(Constants.PREFIXED_MOBILE_NUMBER);
 
 
+        binding.phoneNoShow.setText(prefixedMobileNum);
         binding.verify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
