@@ -4,9 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/app/src/main/res/drawable/edittext_background.xml" value="0.14444444444444443" />
+        <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/app/src/main/res/drawable/ic_baseline_arrow_back_36.xml" value="0.1265625" />
+        <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/app/src/main/res/drawable/ic_baseline_arrow_forward_36.xml" value="0.1265625" />
+        <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/app/src/main/res/drawable/ic_baseline_check_36.xml" value="0.8357142857142857" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/app/src/main/res/layout/activity_add_lab_history.xml" value="0.1078125" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/app/src/main/res/layout/activity_add_past_history.xml" value="0.1078125" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/app/src/main/res/layout/activity_book_appointment.xml" value="0.18" />
+        <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/app/src/main/res/layout/activity_crop_images.xml" value="0.16" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/app/src/main/res/layout/activity_display_hospital_details.xml" value="0.18" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/app/src/main/res/layout/activity_hospital_detail.xml" value="0.225" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/app/src/main/res/layout/activity_login.xml" value="0.225" />

@@ -23,4 +23,14 @@ public class Constants {
     // Hospital Constants
     public static final String HOSPITAL_ID = "hId";
     public static final String DOCTOR_ID = "dId";
+
+
+    // Crop ImageView Constants
+    public static final String IMAGES = "Images";
+    public static final String IMAGES_BUNDLE = "ImagesBundle";
+    public static final String DISABLE_ASPECT_CROP = "Disable";
+
+    public static final int EXTERNAL_STORAGE_PERMISSION = 11;
+    public static final int IMAGE_REQUEST_CODE = 12;
+    public static final int CROP_IMAGE_REQUEST_CODE = 13;
 }

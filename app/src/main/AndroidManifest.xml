@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TechMeetMercari">
         <activity
+            android:name=".Utils.CropImagesActivity"
+            android:exported="false" />
+        <activity
             android:name=".Medical.DisplayHospitalDetails"
             android:exported="false" />
         <activity
