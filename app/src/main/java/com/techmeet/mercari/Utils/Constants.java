@@ -8,6 +8,10 @@ public class Constants {
 
     public static final String NUMBER_PATTERN_REGEX = "[0-9]+";
 
+    // Registration constants
+    public static final int TYPE_LOGIN = 1;
+    public static final int TYPE_REGISTER = 2;
+
     // Gender Constants
     public static final String GENDER_MALE = "Male";
     public static final String GENDER_FEMALE = "Female";

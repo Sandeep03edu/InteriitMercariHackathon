@@ -32,6 +32,8 @@ public class OtpFillActivity extends AppCompatActivity {
     private String TAG="OtpFillActivity";
     private FirebaseAuth mAuth;
 
+    private int type = -1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +42,13 @@ public class OtpFillActivity extends AppCompatActivity {
 
         if(getIntent()==null || !getIntent().hasExtra(Constants.PREFIXED_MOBILE_NUMBER) || !getIntent().hasExtra(Constants.VERIFICATION_ID)){
             return;
+        }
+
+        if(getIntent().hasExtra(Constants.USER_DETAILS)){
+            type = Constants.TYPE_REGISTER;
+        }
+        else{
+            type = Constants.TYPE_LOGIN;
         }
 
         otpInputs();
@@ -84,12 +93,18 @@ public class OtpFillActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            binding.progressCircular.setVisibility(View.GONE);
                             Log.d(TAG, "signInWithCredential:success");
-                            //TODO : save user details to database
 
-                            startActivity(new Intent(OtpFillActivity.this, HomeActivity.class));
-                            finish();
+                            if(type==Constants.TYPE_REGISTER){
+                                // Save user details to database
+                                // TODO : Set user data to Backend and then proceed to next page
+                            }
+                            else if(type==Constants.TYPE_LOGIN){
+                                // TODO : Logged in user
+                                binding.progressCircular.setVisibility(View.GONE);
+                                startActivity(new Intent(OtpFillActivity.this, HomeActivity.class));
+                                finish();
+                            }
 
 
                             // Update UI

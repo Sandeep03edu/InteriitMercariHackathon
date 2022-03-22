@@ -134,7 +134,7 @@ public class RegistrationActivity extends AppCompatActivity {
                         progressDialog.dismiss();
                         // User details filled
                         // Moving to Otp View Page
-                        User user = new User("", userName, "", prefixedMobileNumber , userGender, userAge, userAddress);
+                        User user = new User("", userName, "", userPhoneNumber , userGender, userAge, userAddress);
                         Gson gson = new Gson();
                         String userGson = gson.toJson(user);
 

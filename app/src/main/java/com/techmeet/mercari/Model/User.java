@@ -4,7 +4,7 @@ public class User {
     private String id;
     private String name;
     private String userImage;
-    private String prefMobileNumber;
+    private String mobileNumber;
     private String gender;
     private String age;
     private String address;
@@ -12,11 +12,11 @@ public class User {
     public User() {
     }
 
-    public User(String id, String name, String userImage, String prefMobileNumber, String gender, String age, String address) {
+    public User(String id, String name, String userImage, String mobileNumber, String gender, String age, String address) {
         this.id = id;
         this.name = name;
         this.userImage = userImage;
-        this.prefMobileNumber = prefMobileNumber;
+        this.mobileNumber = mobileNumber;
         this.gender = gender;
         this.age = age;
         this.address = address;
@@ -38,12 +38,12 @@ public class User {
         this.name = name;
     }
 
-    public String getPrefMobileNumber() {
-        return prefMobileNumber;
+    public String getMobileNumber() {
+        return mobileNumber;
     }
 
-    public void setPrefMobileNumber(String prefMobileNumber) {
-        this.prefMobileNumber = prefMobileNumber;
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
     }
 
     public String getGender() {
@@ -68,5 +68,13 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getUserImage() {
+        return userImage;
+    }
+
+    public void setUserImage(String userImage) {
+        this.userImage = userImage;
     }
 }
