@@ -46,6 +46,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Move user to Registration Page
+                Intent regIntent = new Intent(LoginActivity.this, RegistrationActivity.class);
+                startActivity(regIntent);
+            }
+        });
+
     }
 
     private void SendOtp() {
