@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TechMeetMercari">
         <activity
+            android:name=".Medical.ViewAppointmentHistory"
+            android:exported="false" />
+        <activity
+            android:name=".Lab.ViewLabHistory"
+            android:exported="false" />
+        <activity
+            android:name=".Lab.AddLabHistory"
+            android:exported="false" />
+        <activity
+            android:name=".Lab.LabBookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Medical.AddPastHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Medical.BookAppointmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginRegistration.OtpFillActivity"
             android:exported="false" />
         <activity
