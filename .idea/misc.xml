@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/InteriitMercariHackathon/app/src/main/res/drawable/home_bg.xml" value="0.2703125" />
+        <entry key="..\:/InteriitMercariHackathon/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/InteriitMercariHackathon/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/InteriitMercariHackathon/app/src/main/res/layout/activity_otp_fill.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/app/src/main/res/drawable/edittext_background.xml" value="0.14444444444444443" />
@@ -16,5 +18,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.264" />
+      </ProjectState>
+    </option>
   </component>
 </project>
