@@ -25,7 +25,7 @@
             android:name=".Medical.AddPastHistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".Medical.BookAppointmentActivity"
+            android:name=".Medical.AppointmentSchedulerActivity"
             android:exported="false" />
         <activity
             android:name=".LoginRegistration.OtpFillActivity"
