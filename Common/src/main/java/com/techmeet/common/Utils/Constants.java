@@ -10,6 +10,7 @@ public class Constants {
 
     public static final int PICK_IMAGES_CODE=101;
     public static final int READ_EXTERNAL_STORAGE=213;
+    public static final int CAMERA_REQUEST = 102;
 
     // Registration constants
     public static final int TYPE_LOGIN = 1;
@@ -25,6 +26,8 @@ public class Constants {
     public static final String ROLE_ADMIN = "Admin";
     public static final String ROLE_DOCTOR = "Doctor";
 
+    // Appointments
+    public static final String APPOINTMENT = "Appointment";
 
     // Gender Constants
     public static final String GENDER_MALE = "Male";
