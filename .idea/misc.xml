@@ -21,11 +21,19 @@
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/app/src/main/res/layout/fragment_doctor.xml" value="0.225" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/app/src/main/res/layout/fragment_hospital.xml" value="0.225" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/hospitaldoctor/src/main/res/drawable/edittext_background.xml" value="0.1398148148148148" />
+        <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/hospitaldoctor/src/main/res/drawable/home_bg.xml" value="0.1398148148148148" />
+        <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/hospitaldoctor/src/main/res/layout/activity_doctor_home.xml" value="0.16" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/hospitaldoctor/src/main/res/layout/activity_home.xml" value="0.11041666666666666" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/hospitaldoctor/src/main/res/layout/activity_login.xml" value="0.225" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/hospitaldoctor/src/main/res/layout/activity_otp_fill.xml" value="0.225" />
+        <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/hospitaldoctor/src/main/res/layout/activity_prescription_filling.xml" value="0.25" />
+        <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/hospitaldoctor/src/main/res/layout/activity_reference_list.xml" value="0.225" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/hospitaldoctor/src/main/res/layout/activity_registration.xml" value="0.16" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/hospitaldoctor/src/main/res/layout/activity_start_screen.xml" value="0.2109375" />
+        <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/hospitaldoctor/src/main/res/layout/cart_patient_appointment.xml" value="0.225" />
+        <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/hospitaldoctor/src/main/res/layout/cart_reference.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/hospitaldoctor/src/main/res/layout/images_view_pager.xml" value="0.225" />
+        <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/patient/src/main/res/drawable/home_bg.xml" value="0.1398148148148148" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/patient/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/patient/src/main/res/layout/activity_lab_booking.xml" value="0.225" />
         <entry key="..\:/Users/Sandeep/AndroidStudioProjects/TechMeetMercari/patient/src/main/res/layout/activity_otp_fill.xml" value="0.225" />
