@@ -7,4 +7,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Tech Meet Mercari"
-include ':app'
+include ':patient'
+include ':hospitaldoctor'
+include ':Common'

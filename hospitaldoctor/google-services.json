@@ -1,0 +1,84 @@
+{
+  "project_info": {
+    "project_number": "839470919112",
+    "project_id": "techmeet-a7d77",
+    "storage_bucket": "techmeet-a7d77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839470919112:android:2a8da034ee4ee846c224fd",
+        "android_client_info": {
+          "package_name": "com.techmeet.hospitaldoctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839470919112-kav3d69h1m0klue9r5r5auuv3amvfdbd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDsCCqZV6rUlP654MugYVh2hzc6WzpaqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839470919112-kav3d69h1m0klue9r5r5auuv3amvfdbd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839470919112:android:de3d52ab23ee2723c224fd",
+        "android_client_info": {
+          "package_name": "com.techmeet.mercari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839470919112-ggqur5qt4eq215lqom36ghcm4vs97hkn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techmeet.mercari",
+            "certificate_hash": "0918d7df4b8ae1082abf1e97b766cef6a702c578"
+          }
+        },
+        {
+          "client_id": "839470919112-pvj7r62sn3ftiv3a8khbm0o0r0a5vpbk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techmeet.mercari",
+            "certificate_hash": "d20b1e527513410efbd8694121222435cda40123"
+          }
+        },
+        {
+          "client_id": "839470919112-kav3d69h1m0klue9r5r5auuv3amvfdbd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDsCCqZV6rUlP654MugYVh2hzc6WzpaqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839470919112-kav3d69h1m0klue9r5r5auuv3amvfdbd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
