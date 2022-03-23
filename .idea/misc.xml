@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/InteriitMercariHackathon/app/src/main/res/drawable/home_bg.xml" value="0.2703125" />
         <entry key="..\:/InteriitMercariHackathon/app/src/main/res/layout/activity_add_lab_history.xml" value="0.25416666666666665" />
+        <entry key="..\:/InteriitMercariHackathon/app/src/main/res/layout/activity_add_past_medical_history.xml" value="0.264" />
         <entry key="..\:/InteriitMercariHackathon/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/InteriitMercariHackathon/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/InteriitMercariHackathon/app/src/main/res/layout/activity_otp_fill.xml" value="0.25416666666666665" />
