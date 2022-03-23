@@ -10,6 +10,7 @@ import com.techmeet.mercari.Lab.LabBookingActivity;
 import com.techmeet.mercari.Lab.ViewLabHistory;
 import com.techmeet.mercari.Medical.AppointmentSchedulerActivity;
 import com.techmeet.mercari.Medical.ViewAppointmentHistory;
+import com.techmeet.mercari.UserProfileActivity;
 import com.techmeet.mercari.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity {
@@ -43,6 +44,13 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HomeActivity.this, ViewLabHistory.class));
+            }
+        });
+
+        binding.profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, UserProfileActivity.class));
             }
         });
     }

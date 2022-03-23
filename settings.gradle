@@ -10,3 +10,4 @@ rootProject.name = "Tech Meet Mercari"
 include ':patient'
 include ':hospitaldoctor'
 include ':Common'
+include ':nhmadmin'

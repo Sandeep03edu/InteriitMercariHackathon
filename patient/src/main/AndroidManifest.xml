@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TechMeetMercari">
         <activity
-            android:name="com.techmeet.mercari.Utils.CropImagesActivity"
+            android:name=".UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Utils.CropImagesActivity"
             android:exported="false" />
         <activity
             android:name=".Medical.DisplayHospitalDetails"

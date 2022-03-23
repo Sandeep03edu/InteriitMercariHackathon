@@ -98,6 +98,8 @@ public class OtpFillActivity extends AppCompatActivity {
                             if(type==Constants.TYPE_REGISTER){
                                 // Save user details to database
                                 // TODO : Set user data to Backend and then proceed to next page
+                                startActivity(new Intent(OtpFillActivity.this,HomeActivity.class));
+                                finish();
                             }
                             else if(type==Constants.TYPE_LOGIN){
                                 // TODO : Logged in user
