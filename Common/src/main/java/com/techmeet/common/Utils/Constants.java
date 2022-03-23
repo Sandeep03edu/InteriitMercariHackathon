@@ -33,4 +33,7 @@ public class Constants {
     public static final int EXTERNAL_STORAGE_PERMISSION = 11;
     public static final int IMAGE_REQUEST_CODE = 12;
     public static final int CROP_IMAGE_REQUEST_CODE = 13;
+
+    //APi
+    private static final String BASE_API_URI="http://134.209.149.17:8000/";
 }
