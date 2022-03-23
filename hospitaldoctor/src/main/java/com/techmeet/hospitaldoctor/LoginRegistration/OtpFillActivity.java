@@ -18,8 +18,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.gson.Gson;
 import com.techmeet.common.Utils.Constants;
-import com.techmeet.hospitaldoctor.Home.HomeActivity;
+import com.techmeet.common.Utils.Doctor;
+import com.techmeet.common.Utils.Hospital;
+import com.techmeet.hospitaldoctor.Admin.AdminHomeActivity;
+import com.techmeet.hospitaldoctor.Doctor.DoctorHomeActivity;
 import com.techmeet.hospitaldoctor.databinding.ActivityOtpFillBinding;
 
 public class OtpFillActivity extends AppCompatActivity {
@@ -38,16 +42,11 @@ public class OtpFillActivity extends AppCompatActivity {
         binding= ActivityOtpFillBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        if(getIntent()==null || !getIntent().hasExtra(Constants.PREFIXED_MOBILE_NUMBER) || !getIntent().hasExtra(Constants.VERIFICATION_ID)){
+        if(getIntent()==null || !getIntent().hasExtra(Constants.PREFIXED_MOBILE_NUMBER) || !getIntent().hasExtra(Constants.VERIFICATION_ID) || !getIntent().hasExtra(Constants.HOSPITAL_TYPE)){
             return;
         }
 
-        if(getIntent().hasExtra(Constants.USER_DETAILS)){
-            type = Constants.TYPE_REGISTER;
-        }
-        else{
-            type = Constants.TYPE_LOGIN;
-        }
+        type = getIntent().getIntExtra(Constants.HOSPITAL_TYPE, -1);
 
         otpInputs();
         mAuth=FirebaseAuth.getInstance();
@@ -98,12 +97,35 @@ public class OtpFillActivity extends AppCompatActivity {
                             if(type==Constants.TYPE_REGISTER){
                                 // Save user details to database
                                 // TODO : Set user data to Backend and then proceed to next page
+                                if(getIntent().hasExtra(Constants.ROLE_ADMIN)){
+                                    // Admin Registration
+                                    String hospitalGson = getIntent().getStringExtra(Constants.ROLE_ADMIN);
+                                    Hospital hospital = new Gson().fromJson(hospitalGson, Hospital.class);
+
+                                }
+                                else if(getIntent().hasExtra(Constants.ROLE_DOCTOR)){
+                                    // Doctor Registration
+                                    String doctorGson = getIntent().getStringExtra(Constants.ROLE_DOCTOR);
+                                    Doctor doctor = new Gson().fromJson(doctorGson, Doctor.class);
+
+
+                                }
                             }
                             else if(type==Constants.TYPE_LOGIN){
                                 // TODO : Logged in user
                                 binding.progressCircular.setVisibility(View.GONE);
-                                startActivity(new Intent(OtpFillActivity.this, HomeActivity.class));
-                                finish();
+
+                                // TODO : Get Details and save in SharedPreference
+                                if(getIntent().hasExtra(Constants.ROLE_ADMIN)){
+                                    // Admin Login
+                                    startActivity(new Intent(OtpFillActivity.this, AdminHomeActivity.class));
+                                    finish();
+                                }
+                                else if(getIntent().hasExtra(Constants.ROLE_DOCTOR)){
+                                    // Doctor Login
+                                    startActivity(new Intent(OtpFillActivity.this, DoctorHomeActivity.class));
+                                    finish();
+                                }
                             }
 
 
