@@ -15,14 +15,21 @@ public class Constants {
     public static final int TYPE_LOGIN = 1;
     public static final int TYPE_REGISTER = 2;
 
+    // Hospital Constants
+    public static final String HOSPITAL_TYPE = "HospitalType";
+    public static final int HOSPITAL_ADMIN = 101;
+    public static final int HOSPITAL_DOCTOR = 102;
+    public static final String HOSPITAL_ID = "hId";
+    public static final String DOCTOR_ID = "dId";
+    // Hospital Roles Constants
+    public static final String ROLE_ADMIN = "Admin";
+    public static final String ROLE_DOCTOR = "Doctor";
+
+
     // Gender Constants
     public static final String GENDER_MALE = "Male";
     public static final String GENDER_FEMALE = "Female";
     public static final String GENDER_OTHER = "Other";
-
-    // Hospital Constants
-    public static final String HOSPITAL_ID = "hId";
-    public static final String DOCTOR_ID = "dId";
 
 
     // Crop ImageView Constants
