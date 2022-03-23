@@ -9,13 +9,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.techmeet.common.Utils.DoctorAppointment;
+import com.techmeet.common.Utils.Appointment;
 import com.techmeet.mercari.R;
 
 import java.util.ArrayList;
 
 public class YourAppointmentAdapter extends RecyclerView.Adapter<YourAppointmentAdapter.ViewHolder> {
-    ArrayList<DoctorAppointment> doctorAppointmentArrayList;
+    ArrayList<Appointment> doctorAppointmentArrayList;
     Context context;
 
     @NonNull
@@ -27,10 +27,15 @@ public class YourAppointmentAdapter extends RecyclerView.Adapter<YourAppointment
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        DoctorAppointment doctorAppointment= doctorAppointmentArrayList.get(position);
-        holder.hospital.setText(doctorAppointment.getHospitalName());
-        holder.doctor.setText(doctorAppointment.getDoctorName());
-        holder.status.setText(doctorAppointment.getAppointmentStatus());
+        Appointment doctorAppointment= doctorAppointmentArrayList.get(position);
+        // TODO : Fetch hospital Name using Id
+        String hospitalId = doctorAppointment.getHosId();
+
+        // TODO : Fetch Doctor name using Id
+        String docId = doctorAppointment.getDocId();
+
+        String status = doctorAppointment.getStatus();
+        holder.status.setText(status);
 
     }
 

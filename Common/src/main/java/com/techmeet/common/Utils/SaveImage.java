@@ -1,4 +1,4 @@
-package com.techmeet.mercari.Utils;
+package com.techmeet.common.Utils;
 
 import static android.os.ParcelFileDescriptor.MODE_APPEND;
 
@@ -14,7 +14,6 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.OpenableColumns;
 import android.util.Log;
-
 
 import org.apache.commons.io.FileUtils;
 
