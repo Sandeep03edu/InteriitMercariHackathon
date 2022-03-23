@@ -31,7 +31,7 @@
             android:name=".Lab.LabBookingActivity"
             android:exported="false" />
         <activity
-            android:name=".Medical.AddPastHistoryActivity"
+            android:name=".Medical.AddPastMedicalHistoryActivity"
             android:exported="false" />
         <activity
             android:name=".Medical.AppointmentSchedulerActivity"
