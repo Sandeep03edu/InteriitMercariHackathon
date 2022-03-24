@@ -7,6 +7,9 @@ public class Prescription {
     private String patId;
     private String docId; // Optional
 
+    private String doctorName;
+    private String hospitalName;
+
     private String disease; // Optional
     private String prescription;
 
@@ -15,10 +18,12 @@ public class Prescription {
     public Prescription() {
     }
 
-    public Prescription(String presId, String patId, String docId, String disease, String prescription, ArrayList<String> images) {
+    public Prescription(String presId, String patId, String docId, String doctorName, String hospitalName, String disease, String prescription, ArrayList<String> images) {
         this.presId = presId;
         this.patId = patId;
         this.docId = docId;
+        this.doctorName = doctorName;
+        this.hospitalName = hospitalName;
         this.disease = disease;
         this.prescription = prescription;
         this.images = images;
@@ -70,5 +75,21 @@ public class Prescription {
 
     public void setImages(ArrayList<String> images) {
         this.images = images;
+    }
+
+    public String getDoctorName() {
+        return doctorName;
+    }
+
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
+    }
+
+    public String getHospitalName() {
+        return hospitalName;
+    }
+
+    public void setHospitalName(String hospitalName) {
+        this.hospitalName = hospitalName;
     }
 }
