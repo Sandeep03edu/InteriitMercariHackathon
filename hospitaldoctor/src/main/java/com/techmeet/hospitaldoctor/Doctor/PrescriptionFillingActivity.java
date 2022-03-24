@@ -30,6 +30,7 @@ import com.techmeet.common.Utils.Appointment;
 import com.techmeet.common.Utils.Constants;
 import com.techmeet.common.Utils.Prescription;
 import com.techmeet.common.Utils.SaveImage;
+import com.techmeet.common.Utils.User;
 import com.techmeet.hospitaldoctor.DisplayUploadImageAdapter;
 import com.techmeet.hospitaldoctor.R;
 
@@ -82,7 +83,9 @@ public class PrescriptionFillingActivity extends AppCompatActivity {
                 // TODO : Create prescription and set into database
                 String disease = diseaseName.getText().toString().trim();
                 String pres = diseasePrescription.getText().toString().trim();
-                Prescription prescription = new Prescription("", appointment.getPatId(), appointment.getDocId(), disease, pres, uriArrayList);
+                // TODO : Fetch Names from Doctor profile
+                String docName = "", hospName = "";
+                Prescription prescription = new Prescription("", appointment.getPatId(), appointment.getDocId(), docName, hospName, disease, pres, uriArrayList);
 
                 // TODO : Set Appoint status to be Completed
             }
@@ -110,13 +113,13 @@ public class PrescriptionFillingActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == Constants.CAMERA_REQUEST && resultCode == RESULT_OK && data != null && data.getExtras()!=null) {
+        if (requestCode == Constants.CAMERA_REQUEST && resultCode == RESULT_OK && data != null && data.getExtras() != null) {
             Bitmap photo = (Bitmap) data.getExtras().get("data");
             Uri imageUri = SaveImage.addToFav(PrescriptionFillingActivity.this, "Prescription", System.currentTimeMillis() + "", photo);
             String imageStr = String.valueOf(imageUri);
             uriArrayList.add(imageStr);
 
-            if(uriArrayList.size()>0){
+            if (uriArrayList.size() > 0) {
                 viewPager.setVisibility(View.VISIBLE);
 
                 int screenWidth = Resources.getSystem().getDisplayMetrics().widthPixels;
@@ -186,6 +189,9 @@ public class PrescriptionFillingActivity extends AppCompatActivity {
     private void SetPatientData(Appointment appointment) {
         String patId = appointment.getPatId();
         // TODO : Fetch patient details
+        User user = new User();
+        patientName.setText(user.getName());
+        patientDesc.setText(appointment.getDiseaseDesc());
     }
 
     private void _init() {

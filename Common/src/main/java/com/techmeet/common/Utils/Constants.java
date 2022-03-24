@@ -22,6 +22,7 @@ public class Constants {
     public static final int HOSPITAL_DOCTOR = 102;
     public static final String HOSPITAL_ID = "hId";
     public static final String DOCTOR_ID = "dId";
+
     // Hospital Roles Constants
     public static final String ROLE_ADMIN = "Admin";
     public static final String ROLE_DOCTOR = "Doctor";
@@ -44,6 +45,16 @@ public class Constants {
     public static final int IMAGE_REQUEST_CODE = 12;
     public static final int CROP_IMAGE_REQUEST_CODE = 13;
 
+    // Medicine Constant
+    public static final String MEDICINE_EDIT = "EditMedicine";
+
+    // Bed Constant
+    public static final String BED_EDIT = "EditBed";
+
     //APi
     private static final String BASE_API_URI="http://134.209.149.17:8000/";
+
+    // SharedPreferences
+    public static final String PREFERENCE_HOSPITAL_DOCTOR = "HospitalDoctorPref";
+
 }
