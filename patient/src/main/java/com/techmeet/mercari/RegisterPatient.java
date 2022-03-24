@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class RegisterPatient {
 
-    @SerializedName("firebase_uid")
+    @SerializedName("firebase_id")
     private String firebaseUID;
 
     @SerializedName("name")
