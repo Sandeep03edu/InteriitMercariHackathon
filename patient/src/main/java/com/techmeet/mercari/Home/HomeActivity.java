@@ -1,13 +1,19 @@
 package com.techmeet.mercari.Home;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
+import com.techmeet.common.Utils.Constants;
+import com.techmeet.mercari.Data;
 import com.techmeet.mercari.Lab.LabBookingActivity;
 import com.techmeet.mercari.Lab.ViewLabHistory;
+import com.techmeet.mercari.LoginRegistration.LoginActivity;
 import com.techmeet.mercari.Medical.AppointmentSchedulerActivity;
 import com.techmeet.mercari.Medical.ViewAppointmentHistory;
 import com.techmeet.mercari.UserProfileActivity;
@@ -53,5 +59,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this, UserProfileActivity.class));
             }
         });
+
+        SharedPreferences sharedPreferences=getSharedPreferences("patient", Context.MODE_PRIVATE);
+        String patientDetails= sharedPreferences.getString(Constants.PATIENT_REGISTRATION_RESPONSE,"");
+        Data data=new Gson().fromJson(patientDetails, Data.class);
+
+//        if (data.getAuthToken().isEmpty()){
+//            startActivity(new Intent(this, LoginActivity.class));
+//        }
     }
 }
