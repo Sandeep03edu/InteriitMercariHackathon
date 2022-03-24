@@ -6,9 +6,9 @@
     tools:context=".Medical.HospitalFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_hospital_rcv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fragment_hospital_rcv"
-        tools:listitem="@layout/cart_hospital"/>
+        tools:listitem="@layout/cart_hospital" />
 
 </RelativeLayout>

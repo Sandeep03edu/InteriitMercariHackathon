@@ -136,12 +136,22 @@ public class RegistrationActivity extends AppCompatActivity {
                         Gson gson = new Gson();
                         String userGson = gson.toJson(user);
 
+
                         // Move to Otp view
                         Intent otpIntent = new Intent(RegistrationActivity.this, OtpFillActivity.class);
                         otpIntent.putExtra(Constants.USER_DETAILS, userGson);
                         otpIntent.putExtra(Constants.PREFIXED_MOBILE_NUMBER, prefixedMobileNumber);
                         otpIntent.putExtra(Constants.VERIFICATION_ID, s);
+                        otpIntent.putExtra(Constants.USER_NAME,userName);
+                        otpIntent.putExtra(Constants.AGE,age.getText().toString());
+                        otpIntent.putExtra(Constants.GENDER,userGender);
+                        otpIntent.putExtra(Constants.ADDRESS,address.getText().toString());
                         startActivity(otpIntent);
+                        name.setText("");
+                        age.setText("");
+                        address.setText("");
+                        phoneNumber.setText("");
+                        genderSpinner.setSelection(0);
                     }
                 }).build();
 

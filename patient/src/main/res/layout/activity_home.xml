@@ -175,7 +175,7 @@
         app:layout_constraintTop_toTopOf="@+id/cardView2">
 
         <LinearLayout
-            android:id="@+id/past_lab_test"
+            android:id="@+id/add_your_past_disease_history"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
