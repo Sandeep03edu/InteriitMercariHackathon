@@ -40,7 +40,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this, LabBookingActivity.class));
             }
         });
-        binding.pastLabTest.setOnClickListener(new View.OnClickListener() {
+        binding.addYourPastDiseaseHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HomeActivity.this, ViewLabHistory.class));

@@ -1,5 +1,7 @@
 package com.techmeet.mercari.Medical;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -7,15 +9,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.Gson;
+import com.techmeet.common.Utils.Constants;
 import com.techmeet.common.Utils.Hospital;
+import com.techmeet.mercari.Data;
 import com.techmeet.mercari.R;
+import com.techmeet.mercari.retrofit.RetrofitPatientClient;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class HospitalFragment extends Fragment {
@@ -40,8 +53,25 @@ public class HospitalFragment extends Fragment {
         ArrayList<Hospital> hospitals = new ArrayList<>();
         HospitalAdapter adapter = new HospitalAdapter(getContext(), hospitals);
         recyclerView.setAdapter(adapter);
+        SharedPreferences sharedPreferences= getContext().getSharedPreferences("patient", Context.MODE_PRIVATE);
 
-        // TODO: Implement API and adapter
+        String patientDetails= sharedPreferences.getString(Constants.PATIENT_REGISTRATION_RESPONSE,"");
+        Data data=new Gson().fromJson(patientDetails, Data.class);
+
+        Call<ArrayList<Hospital>> getHospitalByNameCall=RetrofitPatientClient.getService().getHospitalByName(searchText.getText().toString(),data.getAuthToken());
+        getHospitalByNameCall.enqueue(new Callback<ArrayList<Hospital>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Hospital>> call, Response<ArrayList<Hospital>> response) {
+                hospitals.addAll(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Hospital>> call, Throwable t) {
+
+            }
+        });
+
+
 
     }
 
@@ -78,6 +108,11 @@ public class HospitalFragment extends Fragment {
         }
 
         return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
     }
 
     private void _init(View v) {

@@ -8,13 +8,21 @@ public class Constants {
 
     public static final String NUMBER_PATTERN_REGEX = "[0-9]+";
 
-    public static final int PICK_IMAGES_CODE=101;
-    public static final int READ_EXTERNAL_STORAGE=213;
+    public static final int PICK_IMAGES_CODE = 101;
+    public static final int READ_EXTERNAL_STORAGE = 213;
     public static final int CAMERA_REQUEST = 102;
 
     // Registration constants
     public static final int TYPE_LOGIN = 1;
     public static final int TYPE_REGISTER = 2;
+
+    //patient Registration
+    public static final String USER_NAME = "username";
+    public static final String AGE = "age";
+    public static final String GENDER = "gender";
+    public static final String ADDRESS = "address";
+    public static final String PATIENT_REGISTRATION_RESPONSE = "patientRegisterResponse";
+
 
     // Hospital Constants
     public static final String HOSPITAL_TYPE = "HospitalType";
@@ -52,9 +60,8 @@ public class Constants {
     public static final String BED_EDIT = "EditBed";
 
     //APi
-    private static final String BASE_API_URI="http://134.209.149.17:8000/";
+    public static final String BASE_API_URI = "http://134.209.149.17:8000/";
 
     // SharedPreferences
     public static final String PREFERENCE_HOSPITAL_DOCTOR = "HospitalDoctorPref";
-
 }

@@ -1,5 +1,7 @@
 package com.techmeet.mercari.Medical;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,10 +14,18 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.Gson;
+import com.techmeet.common.Utils.Constants;
 import com.techmeet.common.Utils.Doctor;
+import com.techmeet.mercari.Data;
 import com.techmeet.mercari.R;
+import com.techmeet.mercari.retrofit.RetrofitPatientClient;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class DoctorFragment extends Fragment {
 
@@ -42,6 +52,22 @@ public class DoctorFragment extends Fragment {
         DoctorAdapter adapter = new DoctorAdapter(getContext(), doctorArrayList);
         recyclerView.setAdapter(adapter);
         // TODO: Implement API and adapter
+        SharedPreferences sharedPreferences= getContext().getSharedPreferences("patient", Context.MODE_PRIVATE);
+
+        String patientDetails= sharedPreferences.getString(Constants.PATIENT_REGISTRATION_RESPONSE,"");
+        Data data=new Gson().fromJson(patientDetails, Data.class);
+        Call<ArrayList<Doctor>> getDoctorByDegreeCall= RetrofitPatientClient.getService().getDoctorByDegree(searchText.getText().toString(),data.getAuthToken());
+        getDoctorByDegreeCall.enqueue(new Callback<ArrayList<Doctor>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Doctor>> call, Response<ArrayList<Doctor>> response) {
+                doctorArrayList.addAll(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Doctor>> call, Throwable t) {
+
+            }
+        });
     }
 
 

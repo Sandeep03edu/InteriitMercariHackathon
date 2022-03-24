@@ -147,7 +147,7 @@
                 android:paddingTop="10dp"
                 android:paddingEnd="20dp"
                 android:paddingBottom="10dp"
-                android:text="Requet Appointment"
+                android:text="Request Appointment"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
