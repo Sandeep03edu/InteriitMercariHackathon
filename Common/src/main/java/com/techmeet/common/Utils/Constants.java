@@ -49,4 +49,7 @@ public class Constants {
 
     // Bed Constant
     public static final String BED_EDIT = "EditBed";
+    //APi
+    private static final String BASE_API_URI="http://134.209.149.17:8000/";
+
 }

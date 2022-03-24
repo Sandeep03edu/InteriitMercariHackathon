@@ -22,6 +22,9 @@
             android:name=".Admin.Medicine.MedicineStockUpdate"
             android:exported="false" />
         <activity
+            android:name=".Admin.AppointmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".Doctor.PrescriptionFillingActivity"
             android:exported="false" />
         <activity
