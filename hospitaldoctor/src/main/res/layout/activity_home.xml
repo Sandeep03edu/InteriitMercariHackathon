@@ -112,7 +112,7 @@
         app:layout_constraintVertical_bias="0.564">
 
         <LinearLayout
-            android:id="@+id/book_lab_test"
+            android:id="@+id/home_bed_status"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -129,7 +129,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Book Lab Test"
+                android:text="Bed Availability"
                 android:textColor="@color/black" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -175,7 +175,7 @@
         app:layout_constraintTop_toTopOf="@+id/cardView2">
 
         <LinearLayout
-            android:id="@+id/past_lab_test"
+            android:id="@+id/home_medicine_stock"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -185,13 +185,14 @@
                 android:layout_height="130dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
+                android:src="@mipmap/manage_appointment"
                 android:scaleType="fitCenter"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Add Your Past Disease History"
+                android:text="Medicine Stock"
                 android:textColor="@color/black" />
         </LinearLayout>
 

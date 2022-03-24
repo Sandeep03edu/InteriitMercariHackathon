@@ -1,6 +1,7 @@
 package com.techmeet.hospitaldoctor.LoginRegistration;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -118,12 +119,29 @@ public class OtpFillActivity extends AppCompatActivity {
                                 // TODO : Get Details and save in SharedPreference
                                 if(getIntent().hasExtra(Constants.ROLE_ADMIN)){
                                     // Admin Login
-                                    startActivity(new Intent(OtpFillActivity.this, AdminHomeActivity.class));
+
+                                    SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(Constants.PREFERENCE_HOSPITAL_DOCTOR, MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                                    // TODO : Save Admin Gson
+                                    editor.putString(Constants.ROLE_ADMIN, "");
+                                    editor.apply();
+
+                                    Intent intent = new Intent(OtpFillActivity.this, AdminHomeActivity.class);
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    startActivity(intent);
                                     finish();
                                 }
                                 else if(getIntent().hasExtra(Constants.ROLE_DOCTOR)){
                                     // Doctor Login
-                                    startActivity(new Intent(OtpFillActivity.this, DoctorHomeActivity.class));
+                                    SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(Constants.PREFERENCE_HOSPITAL_DOCTOR, MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                                    // TODO : Save Doctor Gson
+                                    editor.putString(Constants.ROLE_DOCTOR, "");
+                                    editor.apply();
+
+                                    Intent intent = new Intent(OtpFillActivity.this, DoctorHomeActivity.class);
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    startActivity(intent);
                                     finish();
                                 }
                             }
