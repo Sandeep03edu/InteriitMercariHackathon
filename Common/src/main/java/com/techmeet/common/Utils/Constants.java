@@ -43,4 +43,10 @@ public class Constants {
     public static final int EXTERNAL_STORAGE_PERMISSION = 11;
     public static final int IMAGE_REQUEST_CODE = 12;
     public static final int CROP_IMAGE_REQUEST_CODE = 13;
+
+    // Medicine Constant
+    public static final String MEDICINE_EDIT = "EditMedicine";
+
+    // Bed Constant
+    public static final String BED_EDIT = "EditBed";
 }

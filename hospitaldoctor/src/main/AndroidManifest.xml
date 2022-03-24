@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TechMeetMercari">
         <activity
+            android:name=".Admin.BedStats.AddEditBed"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.BedStats.BedUpdate"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Medicine.AddEditMedicine"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Medicine.MedicineStockUpdate"
+            android:exported="false" />
+        <activity
             android:name=".Doctor.PrescriptionFillingActivity"
             android:exported="false" />
         <activity
